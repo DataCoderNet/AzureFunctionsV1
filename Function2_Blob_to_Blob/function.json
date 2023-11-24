@@ -1,0 +1,19 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "myblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "%container1_Name%/{name}",
+      "connection": "personalstoragehector_STORAGE"
+    },
+    {
+      "type": "blob",
+      "direction": "out",
+      "name": "outputBlob",
+      "path": "%container2_Name%/{rand-guid}",
+      "connection": "personalstoragehector_STORAGE"
+    }
+  ]
+}
